@@ -15,23 +15,23 @@
 		["-"],
 
 		["w","Fijar velocidad Motor A: %n - Motor B: %n","setMotor","25","0",
-		{"setup":"onBoardMotors.init();\n","inc":"#include \"Boca_Motors.h\"","def":"DcMotors onBoardMotors; \n","work":"onBoardMotors.set({0},{1});\n","loop":""}],
+		{"setup":"onBoardMotors.init();\n","inc":"#include \"Boca_Motors.h\"\n","def":"DcMotors onBoardMotors; \n","work":"onBoardMotors.set({0},{1});\n","loop":""}],
 
 		["-"],
 
 		["w", "Definir Modelo de sensor %d.sensors a %d.sensorModels","setIRSensor","Puerto 1","GP2Y0A51SK0F",
-		{"encode":"{d0}{d1}","setup":"setSensorModel({0},{1});\n","inc":"#include \"Boca_IrSensors.h\"","def":"","work":"","loop":""}],
+		{"encode":"{d0}{d1}","setup":"setSensorModel({0},{1});\n","inc":"#include \"Boca_IrSensors.h\"\n","def":"","work":"","loop":""}],
 
 		["R", "Obtener distancia sensor %d.sensors","getIRSensor","Puerto 1",
-		{"encode":"{d0}","setup":"configure_sensors();\n","inc":"#include \"Boca_IrSensors.h\"","def":"","work":"read_sensor({0})","loop":""}],
+		{"encode":"{d0}","setup":"configure_sensors();\n","inc":"#include \"Boca_IrSensors.h\"\n","def":"","work":"read_sensor({0})","loop":""}],
 
 		["-"],
 
 		["R","Obtener contador de %d.encoders","getEncoder","Encoder A",
-		{"encode":"{d0}","setup":"initialize_encoders();\n","inc":"#include \"Boca_Encoders.h\"","def":"","work":"get_encoder_count({0})","loop":""}],
+		{"encode":"{d0}","setup":"initialize_encoders();\n","inc":"#include \"Boca_Encoders.h\"\n","def":"","work":"get_encoder_count({0})","loop":""}],
 
 		["R","Leer RPM de %d.encoders","getRPMEncoder","Encoder A",
-		{"encode":"{d0}","setup":"initialize_encoders();\n","inc":"#include \"Boca_Encoders.h\"","def":"","work":"get_RPM({0})","loop":"check_rpm();\n"}],
+		{"encode":"{d0}","setup":"initialize_encoders();\n","inc":"#include \"Boca_Encoders.h\"\n","def":"","work":"get_RPM({0})","loop":"check_rpm();\n"}],
 
 		["w","Configurar tiempo de encoders a %n ms","configureEncodersTime","20",
 		{"setup":"","inc":"","def":"","work":"set_time_to_check({0});\n","loop":""}],
@@ -39,7 +39,7 @@
 		["-"],
 		
 		["w","Configurar Bluetooth Rx:%n Tx:%n a %n baudios","configureBluetooth","14","15","115200",
-		{"setup":"bluetooth.begin({2});\n","inc":"#include <SoftwareSerial.h>","def":"SoftwareSerial bluetooth({0},{1});\n","work":"","loop":""}],
+		{"setup":"bluetooth.begin({2});\n","inc":"#include <SoftwareSerial.h>\n","def":"SoftwareSerial bluetooth({0},{1});\n","work":"","loop":""}],
 
 		["w","Escribir por Bluetooth %s","sendBluetooth","Hola Mundo!!",
 		{"setup":"","inc":"","def":"","work":"bluetooth.println({0});\n","loop":""}]
