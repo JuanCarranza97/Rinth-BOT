@@ -12,14 +12,12 @@
   #define NEGATE_RIGHT_COUNTER
   
   //#define BEBUG_ENCODERS
-
-  #define CHECK_TIME_MS 20
   
   void initialize_encoders(void);
   int get_encoder_count(int enc);
   int get_RPM(int enc);
   void check_rpm(void);
-  
+  void set_time_to_check(int value);
   void external_interrupt_outA_LM_ISR(void);
   void external_interrupt_outB_LM_ISR(void);
   void external_interrupt_outA_RM_ISR(void);
