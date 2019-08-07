@@ -17,6 +17,9 @@
 		["w","Fijar velocidad Motor A: %n - Motor B: %n","setMotor","25","0",
 		{"setup":"onBoardMotors.init();\n","inc":"#include \"Boca_Motors.h\"\n","def":"DcMotors onBoardMotors; \n","work":"onBoardMotors.set({0},{1});\n","loop":""}],
 
+		["B", "Boton en pin %n presionado","getDigital","5",
+		{"encode":"","setup":"pinMode({0},INPUT_PULLUP);\n","inc":"","def":"","work":"!digitalRead({0})","loop":""}],
+		
 		["-"],
 
 		["w", "Definir Modelo de sensor %d.sensors a %d.sensorModels","setIRSensor","Puerto 1","GP2Y0A51SK0F",
